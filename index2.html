@@ -1,0 +1,799 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Assignments</title>
+	<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+	<link href="indexstyles.css" type="text/css" rel="stylesheet">
+	<script src="rollover.js" language="javascript" type="text/javascript"></script>
+	<style>
+		.header { 
+			background:url("banner2.png") center center no-repeat;
+		}
+	</style>
+	<script type="text/javascript">
+
+  		var _gaq = _gaq || [];
+  		_gaq.push(['_setAccount', 'UA-37060959-2']);
+  		_gaq.push(['_trackPageview']);
+
+  		(function() {
+    		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  		})();
+
+	</script>
+</head>
+<body>
+<!--	<div class="container">-->
+	
+	<div class="header">
+		
+	</div> <!-- end class header -->
+	<div class="container">
+	<div class="navbar">
+		<ul>
+			<li><a href="index.html"><img id="button1" src="mybutton/button1_up.gif" style="width: 140px; height: 100px;" /></a></li>
+			<li><a href="index2.html"><img id="button2" src="mybutton/button2_up.gif" style="width: 140px; height: 100px;" /></a></li>
+			<li><a href="index3.html"><img id="button3" src="mybutton/button3_up.gif" style="width: 140px; height: 100px;" /></a></li>
+			<li><a href="index4.html"><img id="button4" src="mybutton/button4_up.gif" style="width: 140px; height: 100px;" /></a></li>
+			<li><a href="index5.html"><img id="button5" src="mybutton/button5_up.gif" style="width: 140px; height: 100px;" /></a></li>
+		</ul>
+
+	</div> <!-- end class intro -->
+	
+	<div class="content">
+		
+		<h2>Homework Assignments</h2>
+		
+		<ul>
+			<li><h3>Assignment 1: Gumball Machine</h3>
+				<p>gumball_assignment.py</p>
+				<textarea rows="15" cols="80" readonly="readonly">
+					
+from random import randint
+
+print "Welcome to the CIMS Gumball Machine Simulator!"
+
+#totalballs is the full list of gumballs
+totalballs = []
+
+print "You are starting with the following Gumballs:"
+
+#randomly pick the number of each color
+yellowballs = randint(10, 15)
+print str(yellowballs) + " Yellow"
+blueballs = randint(1, 10)
+print str(blueballs) + " Blue"
+whiteballs = randint(6, 15)
+print str(whiteballs) + " White"
+greenballs = randint(10, 25)
+print str(greenballs) + " Green"
+blackballs = randint(1, 12)
+print str(blackballs) + " Black"
+purpleballs = randint(5, 10)
+print str(purpleballs) + " Purple"
+silverballs = randint(4, 6)
+print str(silverballs) + " Silver"
+cyanballs = randint(5, 12)
+print str(cyanballs) + " Cyan"
+magentaballs = randint(0, 10)
+print str(magentaballs) + " Magenta"
+redballs = 1
+print "and " + str(redballs) + " Red"
+
+#populate totalballs with the randomly picked numbers of each color
+for i in range(yellowballs):
+    totalballs.append(1)   
+for i in range(blueballs):
+    totalballs.append(2)
+for i in range(whiteballs):
+    totalballs.append(3)   
+for i in range(greenballs):
+    totalballs.append(4)   
+for i in range(blackballs):
+    totalballs.append(5)   
+for i in range(purpleballs):
+    totalballs.append(6)   
+for i in range(silverballs):
+    totalballs.append(7)  
+for i in range(cyanballs):
+    totalballs.append(8)   
+for i in range(magentaballs):
+    totalballs.append(9)   
+for i in range(redballs):
+    totalballs.append(10)
+#print totalballs
+
+#print "total number of gumballs available: "
+#print len(totalballs)
+
+print "Here are your random purchases:"
+
+#count the number of quarters you spend
+count = 0
+
+#the number of each color you pick
+picked = {'Yellow' : 0, 'Blue' : 0, 'White' : 0, 'Green' : 0, 'Black' : 0, 'Purple' : 0, 'Silver' : 0, 'Cyan' : 0, 'Magenta' : 0, 'Red' : 0}
+
+#randomly pick the gumballs
+while count < len(totalballs):
+    newpick = randint(0, len(totalballs)-1)
+    #print "count" + str(count)
+    if totalballs[newpick] != 99:
+        #print totalballs[newpick]
+        if totalballs[newpick] == 1:
+            print "Yellow"
+            picked['Yellow'] += 1
+            totalballs[newpick] = 99
+            count += 1
+        elif totalballs[newpick] == 2:
+            print "Blue"
+            picked['Blue'] += 1
+            totalballs[newpick] = 99
+            count += 1
+        elif totalballs[newpick] == 3:
+            print "White"
+            picked['White'] += 1
+            totalballs[newpick] = 99
+            count += 1
+        elif totalballs[newpick] == 4:
+            print "Green"
+            picked['Green'] += 1
+            totalballs[newpick] = 99
+            count += 1
+        elif totalballs[newpick] == 5:
+            print "Black"
+            picked['Black'] += 1
+            totalballs[newpick] = 99
+            count += 1
+        elif totalballs[newpick] == 6:
+            print "Purple"
+            picked['Purple'] += 1
+            totalballs[newpick] = 99
+            count += 1
+        elif totalballs[newpick] == 7:
+            print "Silver"
+            picked['Silver'] += 1
+            totalballs[newpick] = 99
+            count += 1
+        elif totalballs[newpick] == 8:
+            print "Cyan"
+            picked['Cyan'] += 1
+            totalballs[newpick] = 99
+            count += 1
+        elif totalballs[newpick] == 9:
+            print "Magenta"
+            picked['Magenta'] += 1
+            totalballs[newpick] = 99
+            count += 1
+        elif totalballs[newpick] == 10:
+            print "Red"
+            picked['Red'] += 1
+            #stop it's the red one
+            break
+    """else:
+        print "that one was already picked"
+    """
+    
+#print "that took " + str(count + 1) + " quarters"
+
+print "You purchased " + str(count + 1) + " Gumballs, for a total of $" + "%.2f" % ((count + 1) * .25)
+    
+#print picked
+
+#just the numbers of each color picked
+justvalues = list(picked.values())
+
+#the max number picked of any color
+maxvalue = max(justvalues)
+
+#the most populous color(s)
+maxcolors = ""
+
+#print justvalues
+#print maxvalue
+
+for color, num in picked.items():
+    if num == maxvalue:
+        maxcolors += " " + color
+        
+print "The color(s) purchased most:" + maxcolors
+
+					
+					
+				</textarea>
+			</li>
+			<li><h3>Assignment 2: This Website</h3>
+				<p>index.html, index2.html, index3.html, index4.html, index5.html, indexstyles.css, rollover.css, rollover.js</p>
+				<textarea rows="15" cols="80" readonly="readonly">
+-----INDEX.HTML-----
+				
+				
+				
+				
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Hello, World!</title>
+	<link href="indexstyles.css" type="text/css" rel="stylesheet">
+	<script src="rollover.js" language="javascript" type="text/javascript"></script>
+	<style>
+		.header { 
+			background:url("banner1.png") center center no-repeat;
+		}
+		
+	</style>
+</head>
+<body>
+<!--	<div class="container">-->
+	
+	<div class="header">
+		
+	</div> <!-- end class header -->
+	<div class="container">
+	<div class="navbar">
+		<ul>
+			<li><a href="index.html"><img id="button1" src="mybutton/button1_up.gif" style="width: 140px; height: 100px;" /></a></li>
+			<li><a href="index2.html"><img id="button2" src="mybutton/button2_up.gif" style="width: 140px; height: 100px;" /></a></li>
+			<li><a href="index3.html"><img id="button3" src="mybutton/button3_up.gif" style="width: 140px; height: 100px;" /></a></li>
+			<li><a href="index4.html"><img id="button4" src="mybutton/button4_up.gif" style="width: 140px; height: 100px;" /></a></li>
+			<li><a href="index5.html"><img id="button5" src="mybutton/button5_up.gif" style="width: 140px; height: 100px;" /></a></li>
+		</ul>
+
+	</div> <!-- end class intro -->
+	
+	<div class="content">
+		
+		<h2>Welcome to Natalie's Web Programming & Development (CSCI-UA.0061-001) site.</h2>
+		
+		<p>Here you'll find my class assignments, some stuff about me, and some sites I like.</p>
+		
+		<p>Check back often for new content!</p>
+		
+	</div> <!-- end class content -->
+	
+	
+	
+	
+		
+	<div class="footer">
+		<img id="ribbon" src="ribbonpic.png"></img>
+		<br/><br/><br/><br/>
+		<h4>This is Natalie's Web Development & Programming site. To see Natalie's Intro to Web Design & Computer Principles site click <b><a href="intro/index.html">here</a></b>.</h4>
+		
+	</div> <!-- end class footer -->
+		
+	</div> <!-- end class container -->
+	
+</body>
+
+</html>			
+				
+				
+				
+				
+-----INDEX2.HTML-----
+				
+				
+				
+				
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Assignments</title>
+	<link href="indexstyles.css" type="text/css" rel="stylesheet">
+	<script src="rollover.js" language="javascript" type="text/javascript"></script>
+	<style>
+		.header { 
+			background:url("banner2.png") center center no-repeat;
+		}
+	</style>
+</head>
+<body>
+<!--	<div class="container">-->
+	
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Assignments</title>
+	<link href="indexstyles.css" type="text/css" rel="stylesheet">
+	<script src="rollover.js" language="javascript" type="text/javascript"></script>
+	<style>
+		.header { 
+			background:url("banner2.png") center center no-repeat;
+		}
+	</style>
+</head>
+<body>
+<!--	<div class="container">-->
+	
+	<div class="header">
+		
+	</div> <!-- end class header -->
+	<div class="container">
+	<div class="navbar">
+		<ul>
+			<li><a href="index.html"><img id="button1" src="mybutton/button1_up.gif" style="width: 140px; height: 100px;" /></a></li>
+			<li><a href="index2.html"><img id="button2" src="mybutton/button2_up.gif" style="width: 140px; height: 100px;" /></a></li>
+			<li><a href="index3.html"><img id="button3" src="mybutton/button3_up.gif" style="width: 140px; height: 100px;" /></a></li>
+			<li><a href="index4.html"><img id="button4" src="mybutton/button4_up.gif" style="width: 140px; height: 100px;" /></a></li>
+			<li><a href="index5.html"><img id="button5" src="mybutton/button5_up.gif" style="width: 140px; height: 100px;" /></a></li>
+		</ul>
+
+	</div> <!-- end class intro -->
+	
+	<div class="content">
+		
+		<h2>Homework Assignments</h2>
+		
+		<ul>
+			<li><h3>Assignment 1: Gumball Machine</h3>
+				<p>gumball_assignment.py</p>
+				&lt;textarea rows="15" cols="80" readonly="readonly"&gt (see above)&lt;/textarea&gt;
+				
+			</li>
+			<li><h3>Assignment 2: This Website</h3>
+				<p>index.html, index2.html, index3.html, index4.html, index5.html, indexstyles.css, rollover.css, rollover.js</p>
+				&lt;textarea rows="15" cols="80" readonly="readonly"&gt (see content of this box)&lt;/textarea&gt;
+								
+			</li>
+		</ul>
+		
+	</div> <!-- end class content -->
+	
+	
+	
+	
+	
+	<div class="footer">
+		<img id="pencil" src="pencilpic.png"></img>
+		<br/><br/><br/><br/>
+		<h4>This is Natalie's Web Development & Programming site. To see Natalie's Intro to Web Design & Computer Principles site click <b><a href="intro/index.html">here</a></b>.</h4>
+		
+	</div> <!-- end class footer -->
+	
+	</div> <!-- end class container -->
+	
+</body>
+
+</html>
+				
+				
+				
+-----INDEX3.HTML-----
+				
+				
+				
+				
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Web Programming Home Page</title>
+	<link href="indexstyles.css" type="text/css" rel="stylesheet">
+	<script src="rollover.js" language="javascript" type="text/javascript"></script>
+	<style>
+		.header { 
+			background:url("banner3.png") center center no-repeat;
+		}
+	</style>
+</head>
+<body>
+<!--	<div class="container">-->
+	
+	<div class="header">
+		
+	</div> <!-- end class header -->
+	<div class="container">
+	<div class="navbar">
+		<ul>
+			<li><a href="index.html"><img id="button1" src="mybutton/button1_up.gif" style="width: 140px; height: 100px;" /></a></li>
+			<li><a href="index2.html"><img id="button2" src="mybutton/button2_up.gif" style="width: 140px; height: 100px;" /></a></li>
+			<li><a href="index3.html"><img id="button3" src="mybutton/button3_up.gif" style="width: 140px; height: 100px;" /></a></li>
+			<li><a href="index4.html"><img id="button4" src="mybutton/button4_up.gif" style="width: 140px; height: 100px;" /></a></li>
+			<li><a href="index5.html"><img id="button5" src="mybutton/button5_up.gif" style="width: 140px; height: 100px;" /></a></li>
+		</ul>
+
+	</div> <!-- end class intro -->
+	
+	<div class="content">
+		<iframe seamless="seamless" src="http://cs.nyu.edu/courses/spring13/CSCI-UA.0061-001/index.html"></iframe>
+		<p>Click <a href="http://cs.nyu.edu/courses/spring13/CSCI-UA.0061-001/index.html" target="_blank">HERE</a> to open the site in a new page.</p>
+		
+	</div> <!-- end class content -->
+	
+	
+	
+	
+	
+	<div class="footer">
+		<img id="cosmo" src="cosmopic.png"></img>
+		<br/><br/><br/><br/>
+		<h4>This is Natalie's Web Development & Programming site. To see Natalie's Intro to Web Design & Computer Principles site click <b><a href="intro/index.html">here</a></b>.</h4>
+		
+	</div> <!-- end class footer -->
+	</div> <!-- end class container -->
+	
+</body>
+
+</html>				
+				
+				
+				
+				
+-----INDEX4.HTML-----
+				
+				
+				
+				
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>About Me</title>
+	<link href="indexstyles.css" type="text/css" rel="stylesheet">
+	<script src="rollover.js" language="javascript" type="text/javascript"></script>
+	<style>
+		.header { 
+			background:url("banner4.png") center center no-repeat;
+		}
+	</style>
+</head>
+<body>
+<!--	<div class="container">-->
+	
+	<div class="header">
+		
+	</div> <!-- end class header -->
+	<div class="container">
+	<div class="navbar">
+		<ul>
+			<li><a href="index.html"><img id="button1" src="mybutton/button1_up.gif" style="width: 140px; height: 100px;" /></a></li>
+			<li><a href="index2.html"><img id="button2" src="mybutton/button2_up.gif" style="width: 140px; height: 100px;" /></a></li>
+			<li><a href="index3.html"><img id="button3" src="mybutton/button3_up.gif" style="width: 140px; height: 100px;" /></a></li>
+			<li><a href="index4.html"><img id="button4" src="mybutton/button4_up.gif" style="width: 140px; height: 100px;" /></a></li>
+			<li><a href="index5.html"><img id="button5" src="mybutton/button5_up.gif" style="width: 140px; height: 100px;" /></a></li>
+		</ul>
+
+	</div> <!-- end class intro -->
+	
+	<div class="content">
+		<p>Oh hey there! Here are some things you may want to know about me.</p>
+		<table>
+			<tr><th>Courses Taken</th><th>Skills Learned</th></tr>
+			<tr><td class="first">Intro to Web Design & Computer Principles</td><td>Adobe Photoshop, Illustrator, Flash, Dreamweaver</td></tr>
+			<tr><td class="first">Web Programming & Development</td><td>Python, HTML, CSS, JavaScript</td></tr>
+		</table>
+	
+		<table>
+			<tr><th>My Sites</th></tr>
+			<tr><td><a href="http://i6.cims.nyu.edu/~nsw236/dreamweaverassignment/index.html">In The Mood For Food</a></td></tr>
+			<tr><td><a href="intro/index.html">Intro to Web Design Home Page</a></td></tr>
+			<tr><td><a href="https://files.nyu.edu/nsw236/public/">The Best Espressos in NYC</a></td></tr>
+			<tr><td><a href="http://natalieweesh.wix.com/main">Photography Portfolio</a></td></tr>
+			<tr><td><a href="http://nataliewee.carbonmade.com/">Doodle Portfolio</a></td></tr>
+		</table>
+	
+	</div> <!-- end class content -->
+	
+	
+	
+	
+	
+	<div class="footer">
+		<img id="mouthpiece" src="mouthpiecepic.png"></img>
+		<br/><br/><br/><br/>
+		<h4>This is Natalie's Web Development & Programming site. To see Natalie's Intro to Web Design & Computer Principles site click <b><a href="intro/index.html">here</a></b>.</h4>
+		
+	</div> <!-- end class footer -->
+	</div> <!-- end class container -->
+	
+</body>
+
+</html>				
+				
+				
+				
+				
+-----INDEX5.HTML-----
+				
+				
+				
+				
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Etc.</title>
+	<link href="indexstyles.css" type="text/css" rel="stylesheet">
+	<script src="rollover.js" language="javascript" type="text/javascript"></script>
+	<style>
+		.header { 
+			background:url("banner5.png") center center no-repeat;
+		}
+	</style>
+</head>
+<body>
+<!--	<div class="container">-->
+	
+	<div class="header">
+		
+	</div> <!-- end class header -->
+	<div class="container">
+	<div class="navbar">
+		<ul>
+			<li><a href="index.html"><img id="button1" src="mybutton/button1_up.gif" style="width: 140px; height: 100px;" /></a></li>
+			<li><a href="index2.html"><img id="button2" src="mybutton/button2_up.gif" style="width: 140px; height: 100px;" /></a></li>
+			<li><a href="index3.html"><img id="button3" src="mybutton/button3_up.gif" style="width: 140px; height: 100px;" /></a></li>
+			<li><a href="index4.html"><img id="button4" src="mybutton/button4_up.gif" style="width: 140px; height: 100px;" /></a></li>
+			<li><a href="index5.html"><img id="button5" src="mybutton/button5_up.gif" style="width: 140px; height: 100px;" /></a></li>
+		</ul>
+
+	</div> <!-- end class intro -->
+	
+	<div class="content">
+		<h3>Here are some sites I like.</h3>
+		<ul>
+			<li><a href="http://madewithpaper.fiftythree.com/">Made with Paper 53</a></li>
+			<li><a href="http://planetpropaganda.com/">Planet Propaganda</a></li>
+			<li><a href="http://www.weareroyale.com/">Royale</a></li>
+		</ul>
+				
+	</div> <!-- end class content -->
+	
+	
+	
+	
+	
+	<div class="footer">
+		<img id="lipstick" src="lipstickpic.png"></img>
+		<br/><br/><br/><br/>
+		<h4>This is Natalie's Web Development & Programming site. To see Natalie's Intro to Web Design & Computer Principles site click <b><a href="intro/index.html">here</a></b>.</h4>
+		
+	</div> <!-- end class footer -->
+	</div> <!-- end class container -->
+	
+</body>
+
+</html>				
+				
+				
+				
+				
+-----INDEXSTYLES.CSS-----
+				
+				
+				
+				
+@import url('rollover.css');
+
+html {
+	background: url('woodpic.gif');
+	background-color: #FAE5C1;
+	background-size: 100% 100%;
+}
+
+body {
+	font: normal 100% 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+}
+
+
+.header { 
+	height: 150px;
+	margin-left: -1%;
+	margin-right: -1%;
+}
+
+
+iframe {
+	width: 100%;
+	height: 500px;
+	max-width: 800px;
+}
+.content ul {
+	list-style-image: url('hatbullet.png');
+
+}
+
+
+h4 {
+	font-size: .7em;
+	font-style: normal;
+}
+
+b {
+	text-transform: uppercase;
+
+}
+	
+div.container {
+	margin: 0 auto;
+	width: 93.75%;
+/*	border: 1px solid purple;*/
+	
+} /* end div.container */
+
+div.header, div.footer {
+	padding: 0.5em;
+	color: white;
+/*	background-color: red;*/
+	clear: both;
+
+} /* end div.header */
+
+div.footer {
+	position: relative;
+	color: #000000;
+	clear: both;
+	float: right;
+	width: 40%;
+
+} /* end div.footer */
+
+div.content {
+	margin-left: 225px;
+/*	border-left: 1px solid red;*/
+	padding: 1em;
+	clear: right;
+}
+
+
+div.navbar {
+	float: left;
+	width: 20%;
+	margin: 0;
+	padding: 1em;
+	
+}
+
+#ribbon {
+	float: right;
+	height: 80px;
+	width: 150%;
+	margin-right: -15%;
+	position:relative;
+}
+#mouthpiece {
+	float: right;
+	height: 190px;
+}
+#cosmo {
+	float: right;
+	height: 115px;
+}
+#lipstick {
+	float: right;
+	height: 150px;
+}
+#pencil {
+	float: right;
+	height: 130px;
+}
+table, th, td {
+	border: 1px solid transparent;
+	text-align: left;
+	padding: .5em;
+}
+td {
+	font-size: .9em;
+}
+th {
+	border-bottom: 1px solid black;
+}
+.first {
+	border-right: 1px solid black;
+}
+				
+				
+				
+				
+				
+-----ROLLOVER.CSS-----
+				
+				
+				
+				
+.navbar ul {
+		float: left;
+		width: 100%;
+		padding: 0;
+		list-style-type: none;
+	
+	} /* end ul */
+
+a {
+	text-decoration: none;
+	color: #356D1C;
+} /* end a */				
+				
+				
+				
+				
+ROLLOVER.JS
+				
+				
+				
+				
+window.onload = rolloverInit;
+
+function rolloverInit() {
+	for (var i=0; i<document.images.length; i++) {
+		if (document.images[i].parentNode.tagName == "A") {
+			setupRollover(document.images[i]);
+		}
+	}
+}
+
+function setupRollover(thisImage) {
+	thisImage.outImage = new Image();
+	thisImage.outImage.src = thisImage.src;
+	thisImage.onmouseout = rollOut;
+
+	thisImage.clickImage = new Image();
+	thisImage.clickImage.src = "mybutton/" + thisImage.id + "_down.gif";
+	thisImage.onclick = rollClick;	
+
+	thisImage.overImage = new Image();
+	thisImage.overImage.src = "mybutton/" + thisImage.id + "_over.gif";
+	thisImage.onmouseover = rollOver;	
+}
+
+function rollOver() {
+	this.src = this.overImage.src;
+}
+
+function rollOut() {
+	this.src = this.outImage.src;
+}
+
+function rollClick() {
+	this.src = this.clickImage.src;
+}
+
+				
+				</textarea>
+			</li>
+			
+			<li>
+				<h3>Assignment 3: Cards</h3>
+				<a href="assign3/index.html">Cards Assignment</a>
+			</li>
+			
+			<li>
+				<h3>Assignment 4: Piglatin</h3>
+				<a href="http://i6.cims.nyu.edu/~nsw236/assign4/piglatin.html">Piglatin Assignment</a>
+			</li>
+			<li>
+				<h3>Assignment 5: Shopping Cart</h3>
+				<a href="http://i6.cims.nyu.edu/~nsw236/assign5/index3.php">Shopping Cart Assignment</a>
+			</li>
+			<li>
+				<h3>Extra Credit Assignment: Puzzle</h3>
+				<a href="http://i6.cims.nyu.edu/~nsw236/assign6/index.html">Puzzle Assignment</a>
+			</li>
+			
+		</ul>
+		
+	</div> <!-- end class content -->
+	
+	
+	
+	
+	
+	<div class="footer">
+		<img id="pencil" src="pencilpic.png"></img>
+		<br/><br/><br/><br/>
+		<h4>This is Natalie's Web Development & Programming site. To see Natalie's Intro to Web Design & Computer Principles site click <b><a href="intro/index.html">here</a></b>.</h4>
+		
+	</div> <!-- end class footer -->
+	
+	</div> <!-- end class container -->
+	
+</body>
+
+</html>
